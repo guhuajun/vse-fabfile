@@ -1,0 +1,29 @@
+{
+    "Fabfile Environment": {
+        "prefix": "Fabfile Environment",
+        "description": "Most of Fabric’s behavior is controllable by modifying env variables, such as env.hosts",
+        "body": [
+            "from fabric.api import *",
+            "\n",
+            "env.hosts = ['host1', 'host2']",
+            "env.passwords = {",
+            "    \"root@host1\": \"password\",",
+            "    \"root@host2\": \"password\"",
+            "}",
+            "env.roledefs = {",
+            "    \"webserver\": [\"root@host1\", \"root@host1\"]",
+            "}"
+        ]
+    },
+    "Fabfile Settings": {
+        "prefix": "Fabfile Settings",
+        "description": "Fabric provides a settings context manager, which takes any number of key/value pairs and will use them to modify env within its wrapped block.",
+        "body": [
+            "from fabric.api import settings, run",
+            "\n",
+            "def exists(path):",
+            "    with settings(warn_only=True):",
+            "        return run('test -e %s' % path)"
+        ]
+    }
+}

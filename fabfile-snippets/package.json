@@ -1,0 +1,30 @@
+{
+    "name": "fabfile-snippets",
+    "displayName": "Fabfile Snippets",
+    "description": "A Visual Studio Code extension for easily composing fabfiles.",
+    "version": "0.0.1",
+    "publisher": "greggu",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guhuajun/vse-fabfile"
+    },
+    "keywords": [
+        "fabfile",
+        "python"
+    ],    
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "icon": "icon.png"
+}
